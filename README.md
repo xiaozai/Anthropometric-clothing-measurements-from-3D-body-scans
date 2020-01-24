@@ -11,7 +11,7 @@ Please cite this paper in your publications if it helps your research:
   @article{yan2019anthropometric,
     title={Anthropometric clothing measurements from 3D body scans},
     author={Yan, Song and Wirta, Johan and K{\"a}m{\"a}r{\"a}inen, Joni-Kristian},
-    journal={arXiv preprint arXiv:1911.00694},
-    year={2019}
+    journal={Machine Vision and Applications 31, 7.(2020)},
+    doi={https://doi.org/10.1007/s00138-019-01054-4}
   }
 </code></pre>
