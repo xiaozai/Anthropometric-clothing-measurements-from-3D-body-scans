@@ -2,6 +2,8 @@
 Code and Datasets for Anthropometric clothing measurements from 3D body scans (MVA paper)
 
  NOMO Dataset can be download from : https://doi.org/10.5281/zenodo.3735905
+  
+ Paper: https://doi.org/10.1007/s00138-019-01054-4
 
 To access the dataset, please contact the authors:
  - [**Song Yan**](https://scholar.google.com/citations?user=nmLU3wwAAAAJ&hl=en), _song.yan at tuni.fi_
