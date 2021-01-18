@@ -1,0 +1,11 @@
+import bpy
+import sys
+
+# argv = sys.argv
+# argv = argv[argv.index("--") + 1:]
+
+obj_in = '/home/yan/Data2/3D_Human_Body_Estimation/SMPL/SMPL_python_v.1.0.0/smpl/smpl_webuser/hello_world/nomo_like.obj'
+obj_out = '/home/yan/Data2/3D_Human_Body_Estimation/SMPL/SMPL_python_v.1.0.0/smpl/smpl_webuser/hello_world/nomo_like_out.obj'
+
+bpy.ops.import_scene.obj(filepath=obj_in)
+bpy.ops.export_scene.obj(filepath=obj_out)

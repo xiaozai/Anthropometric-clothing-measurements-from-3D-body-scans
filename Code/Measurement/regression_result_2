@@ -1,0 +1,386 @@
+2018.03.23 add new measurements
+5-folder cross validation  (repeat 100 iteration)
+------------------------------------------------------------------------------------------------------
+male: totally 192 samples -- 152 for training  40 for testing
+
+  Ankle_Circ:             Mdl = fitrsvm(X, y)           MAE = 10.5119 mm   std = 20.4080 mm                          
+                          Mdl = fitlm(X, y, 'linear')   MAE = 14.7054 mm   std = 21.4967 mm
+
+ *new_Ankle_Circ:         Mdl = fitrsvm(X, y)           MAE =  8.2883 mm   std =  8.3403 mm (11.4269)  29.32%   mid-err = 0.24305 mm abs-mid-err = 6.3503 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  8.5087 mm   std =  8.5553 mm (11.7756)  30.92%   mid-err = 1.3947 mm abs-min-err = 6.7585 mm 
+                          ridge_regression  (100 iters) MAE =  8.3241 mm   std =  8.2067 mm   31.99%
+                          ElasticNet                    MAE =  9.6595 mm   std =  9.5672 mm   29.43%
+                          Linear SVR                    MAE = 12.4994 mm   std = 11.4019 mm   20.60%
+                          stepwiselm                    MAE =  8.5653 mm   std =  8.6346 mm   31.12%
+                          Gaussian Process Regression   MAE =  8.3840 mm   std =  8.4434 mm   31.73%
+                          Ensemble Learners             MAE = 11.8447 mm   std = 12.1789 mm   28.35%
+                        Binary Regression Decision Tree MAE = 10.5405 mm   std = 11.7472 mm   30.11%
+
+  Bicep_Circ:             Mdl = fitrsvm(X, y)           MAE =  6.1372 mm   std =  4.7950 mm (7.7955)  57.09%   Mid-err = 0.50559 mm     Abs-Mid-err = 4.9711 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  6.1721 mm   std =  4.9967 mm (7.9974)  56.87%   Mid-err = 0.79130 mm     Abs-Mid-err = 4.8555 mm
+                          ridge_regression  (100 iters) MAE =  6.2321 mm   std =  4.8946 mm   56.39%
+                          ElasticNet                    MAE =  6.4173 mm   std =  5.1024 mm   54.89%
+                          Linear SVR                    MAE = 24.7343 mm   std = 18.8323 mm   16.64%
+                          stepwiselm                    MAE =  6.0759 mm   std =  4.9515 mm   58.22%
+                          Gaussian Process Regression   MAE =  6.0744 mm   std =  5.0463 mm   58.11%
+                          Ensemble Learners             MAE =  9.0071 mm   std =  8.2590 mm   44.17%
+                        Binary Regression Decision Tree MAE =  8.3425 mm   std =  7.3392 mm   47.13%
+
+
+  Calf_Circ:              Mdl = fitrsvm(X, y)           MAE =  3.1550 mm   std =  2.7740 mm (4.3312)  79.29%   Mid-err = 0.010085 mm     Abs-Mid-err = 2.5881 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  3.2044 mm   std =  2.7875 mm (4.2788)  78.73%   Mid-err = 0.232950 mm     Abs-Mid-err = 2.6468 mm
+                          ridge_regression  (100 iters) MAE =  3.2049 mm   std =  2.7734 mm   78.60%
+                          ElasticNet                    MAE =  3.4891 mm   std =  2.7660 mm   74.47%
+                          Linear SVR                    MAE = 20.5268 mm   std = 16.0875 mm   16.89%
+                          stepwiselm                    MAE =  3.1441 mm   std =  2.7414 mm   79.96%
+                          Gaussian Process Regression   MAE =  3.2340 mm   std =  2.7711 mm   78.33%
+                          Ensemble Learners             MAE =  5.3630 mm   std =  4.9593 mm   56.10%
+                        Binary Regression Decision Tree MAE =  5.1387 mm   std =  4.6736 mm   60.31%
+
+  CHEST_Circ:             Mdl = fitrsvm(X, y)           MAE = 15.1152 mm   std = 16.1839 mm (22.2388)  63.28%  Mid-err = 0.34264 mm     Abs-Mid-err = 10.5542 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 15.8369 mm   std = 15.6366 mm (21.9274)  64.31%  Mid-err = 1.15830 mm     Abs-Mid-err = 11.0725 mm
+                          ridge_regression  (100 iters) MAE = 15.4318 mm   std = 15.9909 mm   65.21%
+                          ElasticNet                    MAE = 16.3744 mm   std = 18.2093 mm   60.39%
+                          Linear SVR                    MAE = 64.7383 mm   std = 46.8764 mm   14.69%
+                          stepwiselm                    MAE = 16.0210 mm   std = 15.8345 mm   62.82%
+                          Gaussian Process Regression   MAE = 15.7694 mm   std = 16.4444 mm   64.90%
+                          Ensemble Learners             MAE = 21.0854 mm   std = 22.8132 mm   50.11%
+                        Binary Regression Decision Tree MAE = 21.1487 mm   std = 22.7352 mm   49.18%
+
+  Elbow_Circ:             Mdl = fitrsvm(X, y)           MAE =  2.8485 mm   std =  2.7446 mm (3.9678)  76.98%  Mid-err = 0.45166 mm     Abs-Mid-err = 2.1341 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  2.9530 mm   std =  2.8380 mm (4.1012)  74.72%  Mid-err = 0.42964 mm     Abs-Mid-err = 2.1231 mm
+                          ridge_regression  (100 iters) MAE =  2.9597 mm   std =  2.7989 mm   75.67%
+                          ElasticNet                    MAE =  3.3715 mm   std =  3.1049 mm   69.58%
+                          Linear SVR                    MAE = 15.3928 mm   std = 11.6691 mm   17.18%
+                          stepwiselm                    MAE =  3.0349 mm   std =  2.9027 mm   74.36%
+                          Gaussian Process Regression   MAE =  2.9769 mm   std =  2.7522 mm   74.80%
+                          Ensemble Learners             MAE =  4.5859 mm   std =  4.2216 mm   53.48%
+                        Binary Regression Decision Tree MAE =  4.4063 mm   std =  3.9698 mm   56.51%
+
+  HIP_Circ:               Mdl = fitrsvm(X, y)           MAE =  9.2361 mm   std =  6.9332 mm (11.5420)  73.39%  Mid-err = -0.38381 mm     Abs-Mid-err = 7.7380 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  9.0621 mm   std =  7.0025 mm (11.4017)  72.26%  Mid-err = -1.12290 mm     Abs-Mid-err = 7.6435 mm
+                          ridge_regression  (100 iters) MAE =  9.0789 mm   std =  7.0163 mm   72.09%
+                          ElasticNet                    MAE =  9.9636 mm   std =  6.8995 mm   69.59%
+                          Linear SVR                    MAE = 48.5578 mm   std = 36.6938 mm   16.29%
+                          stepwiselm                    MAE =  9.1356 mm   std =  6.9920 mm   72.66%
+                          Gaussian Process Regression   MAE =  9.2439 mm   std =  6.8534 mm   73.04%
+                          Ensemble Learners             MAE = 11.5263 mm   std = 10.0325 mm   58.97%
+                        Binary Regression Decision Tree MAE = 11.6019 mm   std =  9.5199 mm   59.99%
+
+  Knee_Circ:              Mdl = fitrsvm(X, y)           MAE =  5.3506 mm   std =  4.5734 mm (7.2417)  44.35%  Mid-err = -0.34105 mm     Abs-Mid-err = 4.8360 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  5.3529 mm   std =  4.6026 mm (7.1689)  45.07%  Mid-err = -0.35797 mm     Abs-Mid-err = 4.4685 mm
+                          ridge_regression  (100 iters) MAE =  5.3822 mm   std =  4.6132 mm   45.18%
+                          ElasticNet                    MAE =  5.9638 mm   std =  4.9975 mm   42.02%
+                          Linear SVR                    MAE = 18.4033 mm   std = 13.4052 mm   12.22%
+                          stepwiselm                    MAE =  5.2689 mm   std =  4.5538 mm   45.85%
+                          Gaussian Process Regression   MAE =  5.3352 mm   std =  4.6435 mm   46.15%
+                          Ensemble Learners             MAE =  7.3722 mm   std =  6.8649 mm   38.71%
+                        Binary Regression Decision Tree MAE =  7.1681 mm   std =  6.8885 mm   40.50%
+
+
+  MAXWAIST_Circ:          Mdl = fitrsvm(X, y)           MAE = 13.4538 mm   std = 12.2755 mm (18.3249)  54.60%  Mid-err = -0.018257 mm     Abs-Mid-err = 10.6088 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 13.4273 mm   std = 11.9255 mm (18.0988)  54.41%  Mid-err = -1.270800 mm     Abs-Mid-err = 11.5786 mm
+                          ridge_regression  (100 iters) MAE = 13.5501 mm   std = 11.9044 mm   54.38%
+                          ElasticNet                    MAE = 14.5833 mm   std = 12.8398 mm   54.09%
+                          Linear SVR                    MAE = 83.3459 mm   std = 59.1235 mm   10.32%
+                          stepwiselm                    MAE = 13.5847 mm   std = 12.0899 mm   54.41%
+                          Gaussian Process Regression   MAE = 13.5856 mm   std = 11.9213 mm   57.50%
+                          Ensemble Learners             MAE = 16.8337 mm   std = 15.8930 mm   47.80%
+                        Binary Regression Decision Tree MAE = 16.8444 mm   std = 14.8639 mm   46.51%
+
+  NeckBase_Circ:          Mdl = fitrsvm(X, y)           MAE =  8.8477 mm   std =  6.9243 mm (11.2183)  67.63%  Mid-err = 0.14193 mm     Abs-Mid-err = 7.3489 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  8.5202 mm   std =  7.0907 mm (11.2290)  70.07%  Mid-err = -0.11701 mm     Abs-Mid-err = 6.5491  mm
+                          ridge_regression  (100 iters) MAE =  8.5038 mm   std =  7.0830 mm   70.07%
+                          ElasticNet                    MAE =  9.5240 mm   std =  7.0775 mm   62.14%
+			  Linear SVR                    MAE = 18.6395 mm   std = 14.3410 mm   38.79% 
+                          stepwiselm                    MAE =  8.4986 mm   std =  7.1349 mm   70.85%
+                          Gaussian Process Regression   MAE =  8.9565 mm   std =  7.4161 mm   67.31%
+                          Ensemble Learners             MAE = 11.0629 mm   std =  9.4957 mm   58.23%
+                        Binary Regression Decision Tree MAE = 11.2021 mm   std =  9.9366 mm   59.66%
+
+  Neck_Circ:              Mdl = fitrsvm(X, y)           MAE =  3.2017 mm   std =  5.8560 mm ?? (6.9452)  92.12%  Mid-err = -0.30203 mm     Abs-Mid-err = 1.8435 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  3.9377 mm   std =  6.3123 mm ?? (7.7104)  86.89%  Mid-err = 0.16232 mm     Abs-Mid-err = 2.6688 mm
+                          ridge_regression  (100 iters) MAE =  3.8463 mm   std =  6.0470 mm   86.44%
+                          ElasticNet                    MAE =  6.9468 mm   std =  7.6658 mm   55.77%
+                          Linear SVR                    MAE = 18.7110 mm   std = 15.0910 mm   18.19%
+                          stepwiselm                    MAE =  4.0750 mm   std =  6.2935 mm   86.59%
+                          Gaussian Process Regression   MAE =  3.6979 mm   std =  6.6585 mm   87.66%
+                          Ensemble Learners             MAE =  5.0537 mm   std =  7.4706 mm   74.04%
+                        Binary Regression Decision Tree MAE =  4.2122 mm   std =  6.5990 mm   81.70%
+
+  Shoulder_to_Shoulder:   Mdl = fitrsvm(X, y)           MAE = 12.6947 mm   std = 10.6212 mm  (16.3845)        Mid-err = 0.11802 mm     Abs-Mid-err = 10.5646 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 12.5028 mm   std = 10.7364 mm  (16.4365)        Mid-err = -0.66651 mm     Abs-Mid-err = 9.6259 mm
+                          ridge_regression  (100 iters) MAE = 12.5196 mm   std = 10.7525 mm  
+                          ElasticNet                    MAE = 13.6691 mm   std = 11.3375 mm    
+                          Linear SVR                    MAE = 23.2971 mm   std = 17.8910 mm    
+                          stepwiselm                    MAE = 12.6014 mm   std = 10.8487 mm    
+                          Gaussian Process Regression   MAE = 12.9786 mm   std = 10.8836 mm    
+                          Ensemble Learners             MAE = 15.6821 mm   std = 13.3401 mm    
+                        Binary Regression Decision Tree MAE = 16.5433 mm   std = 13.2732 mm    
+
+  Shoulder_to_Wrist:      Mdl = fitrsvm(X, y)           MAE = 12.8692 mm   std = 10.6890 mm  (16.3599)        Mid-err = -0.8797 mm     Abs-Mid-err = 10.4225 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 12.9781 mm   std = 10.7856 mm  (16.5146)        Mid-err = 1.1661 mm     Abs-Mid-err = 9.5912 mm
+                          ridge_regression  (100 iters) MAE = 12.9188 mm   std = 10.6506 mm 
+                          ElasticNet                    MAE = 13.4219 mm   std = 11.2899 mm    
+                          Linear SVR                    MAE = 26.2810 mm   std = 21.2872 mm    
+                          stepwiselm                    MAE = 12.8942 mm   std = 10.7307 mm    
+                          Gaussian Process Regression   MAE = 13.0064 mm   std = 10.8372 mm    
+                          Ensemble Learners             MAE = 17.2927 mm   std = 14.8572 mm    
+                        Binary Regression Decision Tree MAE = 16.6984 mm   std = 13.8345 mm    
+
+  Thigh_Circ:             Mdl = fitrsvm(X, y)           MAE =  8.3136 mm   std =  6.9473 mm (10.4583)  44.18%  Mid-err = 0.65785 mm     Abs-Mid-err = 6.8394 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  8.4052 mm   std =  6.9686 mm (10.5658)  43.56%  Mid-err = 0.53679 mm     Abs-Mid-err = 6.7114 mm
+                          ridge_regression  (100 iters) MAE =  8.3455 mm   std =  6.9332 mm   44.12%
+                          ElasticNet                    MAE =  9.0502 mm   std =  7.2405 mm   39.94%
+                          Linear SVR                    MAE = 35.5762 mm   std = 25.4312 mm    7.71%
+                          stepwiselm                    MAE =  8.4935 mm   std =  7.1036 mm   43.40%
+                          Gaussian Process Regression   MAE =  8.2077 mm   std =  6.9161 mm   45.16%
+                          Ensemble Learners             MAE = 11.8420 mm   std = 10.5883 mm   37.56%
+                        Binary Regression Decision Tree MAE = 11.4061 mm   std =  9.5548 mm   35.77%
+
+  TrouserWAIST_Circ:      Mdl = fitrsvm(X, y)           MAE =  9.2885 mm   std =  8.3675 mm (12.5300)          Mid-err = -0.70989 mm     Abs-Mid-err = 6.3011 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  9.2991 mm   std =  8.3435 mm (12.4987)          Mid-err = -1.30700 mm     Abs-Mid-err = 6.4145 mm
+                          ridge_regression  (100 iters) MAE =  9.3190 mm   std =  8.3742 mm  
+                          ElasticNet                    MAE = 10.1262 mm   std =  8.5737 mm    
+                          Linear SVR                    MAE = 58.3402 mm   std = 41.5430 mm    
+                          stepwiselm                    MAE =  9.3392 mm   std =  8.3537 mm    
+                          Gaussian Process Regression   MAE =  9.0418 mm   std =  8.0568 mm 
+                          Ensemble Learners             MAE = 12.5409 mm   std = 10.9747 mm       
+                        Binary Regression Decision Tree MAE = 12.2982 mm   std = 10.4271 mm    
+
+  Wrist_Circ:             Mdl = fitrsvm(X, y)           MAE =  4.6274 mm   std =  3.6259 mm (5.8147)  63.01%   Mid-err = -0.19131 mm     Abs-Mid-err = 3.5433 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  4.5924 mm   std =  3.4985 mm (5.8229)  61.67%   Mid-err = -0.19114 mm     Abs-Mid-err = 3.7848 mm
+                          ridge_regression  (100 iters) MAE =  4.6022 mm   std =  3.5210 mm   61.59%
+                          ElasticNet                    MAE =  4.7792 mm   std =  3.7517 mm   60.32%
+                          Linear SVR                    MAE =  8.0204 mm   std =  6.5452 mm   37.56%
+                          stepwiselm                    MAE =  4.4636 mm   std =  3.4199 mm   64.21%
+                          Gaussian Process Regression   MAE =  4.5075 mm   std =  3.4873 mm   63.38%
+                          Ensemble Learners             MAE =  6.0204 mm   std =  5.2574 mm   51.00%
+                        Binary Regression Decision Tree MAE =  6.1882 mm   std =  5.0015 mm   50.26%
+
+------------------------------------------------------------------------------------------------------
+female: totally 176 samples  --- 140 for training   36 for testing
+  
+  Ankle_Circ:             Mdl = fitrsvm(X, y)           MAE = 15.0444 mm   std = 20.5703 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 17.3458 mm   std = 20.3820 mm
+
+ *new_Ankle_Circ          Mdl = fitrsvm(X, y)           MAE = 13.7553 mm   std = 19.2472 mm (23.0805)   27.37%  Mid-err = -0.1191 mm     Abs-Mid-err = 7.3869 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 15.9915 mm   std = 18.0351 mm (24.1758)   19.25%  Mid-err = 6.4007 mm     Abs-Mid-err = 11.0477 mm
+                          ridge_regression  (100 iters) MAE = 15.6954 mm   std = 17.8690 mm    19.74%
+                          ElasticNet                    MAE = 17.8562 mm   std = 18.3054 mm    17.58%
+                          Linear SVR                    MAE = 18.0494 mm   std = 19.2468 mm    14.67%
+                          stepwiselm                    MAE = 15.2281 mm   std = 18.3874 mm    20.59%
+                          Gaussian Process Regression   MAE = 15.1885 mm   std = 16.8870 mm    18.69%
+                          Ensemble Learners             MAE = 23.1399 mm   std = 21.7029 mm    13.62%
+                        Binary Regression Decision Tree MAE = 20.1158 mm   std = 22.0110 mm    20.11%
+
+  Bicep_Circ:             Mdl = fitrsvm(X, y)           MAE =  4.7487 mm   std =  4.1134 mm (6.2412)   72.42%   Mid-err = -0.26687 mm     Abs-Mid-err = 3.7185 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  4.8263 mm   std =  4.1981 mm (6.3467)   72.96%   Mid-err = -0.029387 mm     Abs-Mid-err = 3.5928 mm
+                          ridge_regression  (100 iters) MAE =  4.8102 mm   std =  4.1905 mm    72.61%
+                          ElasticNet                    MAE =  5.0587 mm   std =  4.5633 mm    69.76%
+                          Linear SVR                    MAE = 21.4068 mm   std = 16.7378 mm    20.14%
+                          stepwiselm                    MAE =  4.8767 mm   std =  4.2623 mm    71.80%
+                          Gaussian Process Regression   MAE =  4.8952 mm   std =  4.2581 mm    72.02%
+                          Ensemble Learners             MAE =  8.9289 mm   std =  7.2561 mm    43.57%
+                        Binary Regression Decision Tree MAE =  8.7431 mm   std =  7.2901 mm    45.23%
+
+  BUST_Circ:              Mdl = fitrsvm(X, y)           MAE = 12.7024 mm   std = 10.6897 mm (16.6998)   69.20%   mid-err = 0.39987 mm abs-err = 9.8954 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 12.8821 mm   std = 10.6038 mm (16.7855)   68.73%   mid-err = 0.96502 mm abs-err = 10.5232 mm
+                          ridge_regression  (100 iters) MAE = 12.8253 mm   std = 10.6724 mm    68.31%
+                          ElasticNet                    MAE = 14.7675 mm   std = 11.8045 mm    60.17%
+                          Linear SVR                    MAE = 51.6895 mm   std = 36.3509 mm    17.92%
+                          stepwiselm                    MAE = 12.8684 mm   std = 10.6373 mm    69.10%
+                          Gaussian Process Regression   MAE = 12.7680 mm   std = 10.8075 mm    68.86%
+                          Ensemble Learners             MAE = 17.7739 mm   std = 15.0313 mm    52.03%
+                        Binary Regression Decision Tree MAE = 18.1152 mm   std = 15.9962 mm    52.04%
+
+  BUST_to_BUST:           Mdl = fitrsvm(X, y)           MAE = 11.5090 mm   std = 12.6605 mm (17.1382)   54.89%   mid-err = -0.13126 mm abs-mid-err = 8.4643 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 12.1867 mm   std = 12.3338 mm (17.5454)   54.66%   mid-err = 0.44675 mm  abs-min-err = 8.8144 mm
+                          ridge_regression  (100 iters) MAE = 11.5825 mm   std = 12.5027 mm    55.06%
+                          ElasticNet                    MAE = 15.5778 mm   std = 14.8203 mm    42.49%
+                          Linear SVR                    MAE = 16.5562 mm   std = 14.7459 mm    39.93%
+                          stepwiselm                    MAE = 11.9731 mm   std = 12.3938 mm    53.76%
+                          Gaussian Process Regression   MAE = 12.2244 mm   std = 13.1447 mm    54.80%
+                          Ensemble Learners             MAE = 17.1285 mm   std = 16.6286 mm    40.74%
+                        Binary Regression Decision Tree MAE = 16.6216 mm   std = 18.5623 mm    42.83%
+
+  Calf_Circ:              Mdl = fitrsvm(X, y)           MAE =  3.8637 mm   std =  6.4744 mm ( 7.8682)   79.08%   mid-err = 0.048504 mm abs-mid-err = 2.5418 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  5.6017 mm   std =  7.7474 mm (10.0415)   59.79%   mid-err = 0.49991 mm abs-min-err = 3.9509 mm
+                          ridge_regression  (100 iters) MAE =  5.6359 mm   std =  7.6923 mm    59.01%
+                          ElasticNet                    MAE = 10.9640 mm   std = 12.2722 mm    38.53%
+                          Linear SVR                    MAE = 20.9735 mm   std = 17.4282 mm    22.01%
+                          stepwiselm                    MAE =  4.5413 mm   std =  7.2652 mm    71.39%
+                          Gaussian Process Regression   MAE =  3.5061 mm   std =  5.3515 mm    81.81%
+                          Ensemble Learners             MAE =  5.8075 mm   std =  5.1522 mm    53.76%
+                        Binary Regression Decision Tree MAE =  4.9189 mm   std =  4.1642 mm    60.34%
+
+  Elbow_Circ:             Mdl = fitrsvm(X, y)           MAE =  3.4282 mm   std =  3.2875 mm (4.6474)   68.32%   mid-err = 0.030573 mm abs-mid-err = 2.2637 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  3.4929 mm   std =  3.2567 mm (4.6435)   66.80%   mid-err = 0.31748 mm abs-min-err = 2.4373 mm
+                          ridge_regression  (100 iters) MAE =  3.4632 mm   std =  3.2614 mm    67.08%
+                          ElasticNet                    MAE =  3.6364 mm   std =  3.5356 mm    65.57%
+                          Linear SVR                    MAE = 14.1416 mm   std = 11.3250 mm    18.74%
+                          stepwiselm                    MAE =  3.5742 mm   std =  3.3687 mm    65.73%
+                          Gaussian Process Regression   MAE =  3.4738 mm   std =  3.3796 mm    67.46%
+                          Ensemble Learners             MAE =  5.4496 mm   std =  4.4878 mm    46.17%
+                        Binary Regression Decision Tree MAE =  5.2231 mm   std =  4.4950 mm    50.58%
+
+  HIP_Circ:               Mdl = fitrsvm(X, y)           MAE =  8.9989 mm   std =  6.8602 mm (11.2450)   70.37%   mid-err = 0.42592 mm abs-mid-err = 6.905 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  9.0662 mm   std =  6.7805 mm (11.2627)   69.90%   mid-err = -0.29334 mm abs-min-err = 7.7189 mm
+                          ridge_regression  (100 iters) MAE =  8.9228 mm   std =  6.9240 mm    71.28%
+                          ElasticNet                    MAE =  9.3038 mm   std =  7.2778 mm    68.55%
+			  Linear SVR                    MAE = 51.6318 mm   std = 42.5429 mm    19.28%
+                          stepwiselm                    MAE =  9.0646 mm   std =  6.8552 mm    70.15%
+                          Gaussian Process Regression   MAE =  8.9550 mm   std =  7.0460 mm    71.04%
+                          Ensemble Learners             MAE = 13.8949 mm   std = 11.5942 mm    53.60%
+                        Binary Regression Decision Tree MAE = 12.1010 mm   std = 10.3193 mm    59.47%
+
+  Knee_Circ:              Mdl = fitrsvm(X, y)           MAE =  6.4513 mm   std =  6.2628 mm (9.0301)   39.51%   mid-err = 0.10428 mm abs-mid-err = 5.1738 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  6.8928 mm   std =  6.5117 mm (9.5693)   36.57%   mid-err = 0.56594 mm abs-min-err = 5.6792 mm
+                          ridge_regression  (100 iters) MAE =  6.6164 mm   std =  6.3244 mm    37.03%
+                          ElasticNet                    MAE =  8.0521 mm   std =  7.0543 mm    32.26%
+                          Linear SVR                    MAE = 21.7967 mm   std = 16.6849 mm    13.40%
+                          stepwiselm                    MAE =  6.5563 mm   std =  6.5199 mm    40.92%
+                          Gaussian Process Regression   MAE =  6.4081 mm   std =  6.0949 mm    40.69%
+                          Ensemble Learners             MAE =  8.5981 mm   std =  7.0734 mm    30.68%
+                        Binary Regression Decision Tree MAE =  8.0092 mm   std =  6.5182 mm    33.36%
+
+  NaturalWAIST_Circ:      Mdl = fitrsvm(X, y)           MAE = 12.2338 mm   std =  9.0009 mm (15.4185)   58.22%   mid-err = -0.45285 mm abs-mid-err = 9.287 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 12.1516 mm   std =  8.9099 mm (15.0706)   58.16%   mid-err = -0.54179 mm abs-min-err = 9.3761 mm
+                          ridge_regression  (100 iters) MAE = 12.1789 mm   std =  8.8877 mm    58.17%
+                          ElasticNet                    MAE = 12.9371 mm   std =  9.3236 mm    53.28%
+                          Linear SVR                    MAE = 61.4725 mm   std = 43.5412 mm    12.50%
+                          stepwiselm                    MAE = 12.1353 mm   std =  8.9274 mm    58.66%
+                          Gaussian Process Regression   MAE = 12.5017 mm   std =  9.2156 mm    57.48%
+                          Ensemble Learners             MAE = 17.1615 mm   std = 13.6682 mm    44.08%
+                        Binary Regression Decision Tree MAE = 16.0118 mm   std = 12.8022 mm    46.66%
+
+  NeckBase_Circ:          Mdl = fitrsvm(X, y)           MAE = 10.3443 mm   std =  9.2927 mm (13.7306)   61.83%   mid-err = 0.19218 mm abs-mid-err = 7.9562 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 10.4089 mm   std =  9.4201 mm (13.7610)   61.96%   mid-err = 0.052638 mm abs-min-err = 7.6892 mm
+                          ridge_regression  (100 iters) MAE = 10.4563 mm   std =  9.3957 mm    61.75%
+                          ElasticNet                    MAE = 11.3478 mm   std =  9.6352 mm    59.17%
+                          Linear SVR                    MAE = 14.5990 mm   std = 12.3916 mm    47.50%
+                          stepwiselm                    MAE = 10.3139 mm   std =  9.3477 mm    62.24%
+                          Gaussian Process Regression   MAE = 10.6475 mm   std =  9.4900 mm    62.58%
+                          Ensemble Learners             MAE = 13.4396 mm   std = 10.6834 mm    49.76%
+                        Binary Regression Decision Tree MAE = 13.2393 mm   std = 10.7573 mm    50.59%
+
+  Neck_Circ:              Mdl = fitrsvm(X, y)           MAE =  5.4400 mm   std =  8.4352 mm (9.3794)   79.61%    mid-err = 0.11619 mm abs-mid-err = 2.5521 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  6.4133 mm   std =  8.4017 mm (10.3441)   68.61%   mid-err = 1.6558 mm abs-min-err = 3.9062 mm
+                          ridge_regression  (100 iters) MAE =  6.3244 mm   std =  8.1271 mm    69.71%
+                          ElasticNet                    MAE =  8.1011 mm   std =  8.0710 mm    51.43%
+                          Linear SVR                    MAE = 15.9648 mm   std = 12.2354 mm    20.95%
+                          stepwiselm                    MAE =  6.6623 mm   std =  8.7475 mm    68.53%
+                          Gaussian Process Regression   MAE =  6.6568 mm   std =  8.8981 mm    68.33%
+                          Ensemble Learners             MAE =  8.7639 mm   std =  8.1377 mm    48.24%
+                        Binary Regression Decision Tree MAE =  7.8313 mm   std =  8.9225 mm    59.33%
+
+  NeckSide_to_Wrist:      Mdl = fitrsvm(X, y)           MAE = 16.7264 mm   std = 12.3128 mm (20.2965)           mid-err = -0.039627 mm abs-mid-err = 15.4055 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 16.7254 mm   std = 12.3221 mm (20.5616)           mid-err = 0.1697 mm    abs-min-err = 14.3322 mm
+                          ridge_regression  (100 iters) MAE = 16.6153 mm   std = 12.2679 mm
+                          ElasticNet                    MAE = 17.6621 mm   std = 12.9088 mm    
+                          Linear SVR                    MAE = 26.7424 mm   std = 19.8574 mm    
+                          stepwiselm                    MAE = 16.8611 mm   std = 12.1142 mm    
+                          Gaussian Process Regression   MAE = 16.6209 mm   std = 11.4020 mm    
+                          Ensemble Learners             MAE = 22.2551 mm   std = 15.5404 mm    
+                        Binary Regression Decision Tree MAE = 21.0688 mm   std = 15.0213 mm    
+
+  Shoulder_to_Shoulder:   Mdl = fitrsvm(X, y)           MAE = 13.4737 mm   std = 12.8397 mm (17.9337)           mid-err = -0.21953 mm abs-mid-err = 10.3887 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 13.4991 mm   std = 12.8304 mm (17.9251)           mid-err = -1.4188 mm  abs-min-err = 9.9764 mm
+                          ridge_regression  (100 iters) MAE = 13.5366 mm   std = 12.7945 mm
+                          ElasticNet                    MAE = 14.8309 mm   std = 13.2930 mm    
+                          Linear SVR                    MAE = 19.4129 mm   std = 16.8947 mm  
+                          stepwiselm                    MAE = 13.5952 mm   std = 12.7164 mm  
+                          Gaussian Process Regression   MAE = 13.9913 mm   std = 12.6880 mm    
+                          Ensemble Learners             MAE = 19.2779 mm   std = 15.4510 mm    
+                        Binary Regression Decision Tree MAE = 18.3928 mm   std = 15.5065 mm    
+
+  Shoulder_to_Wrist:      Mdl = fitrsvm(X, y)           MAE = 14.4405 mm   std = 11.4084 mm (18.0420)           mid-err = -1.0322 mm abs-mid-err = 11.4225 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 14.3978 mm   std = 11.9513 mm (18.4698)           mid-err = 0.20143 mm abs-min-err = 10.9766 mm
+                          ridge_regression  (100 iters) MAE = 14.4847 mm   std = 11.8346 mm  
+                          ElasticNet                    MAE = 15.9625 mm   std = 11.9089 mm    
+                          Linear SVR                    MAE = 25.0774 mm   std = 18.4576 mm 
+			  stepwiselm                    MAE = 14.4037 mm   std = 11.7198 mm   
+                          Gaussian Process Regression   MAE = 15.3127 mm   std = 11.0141 mm    
+                          Ensemble Learners             MAE = 20.2745 mm   std = 14.5896 mm    
+                        Binary Regression Decision Tree MAE = 19.6741 mm   std = 13.6379 mm    
+
+  SideNeck_to_Bust:       Mdl = fitrsvm(X, y)           MAE = 13.2863 mm   std =  9.7073 mm (15.7416)   34.79%  mid-err = -0.35421 mm abs-mid-err = 12.347 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 13.2087 mm   std =  9.5849 mm (15.7770)   33.62%  mid-err = 0.86359 mm  abs-min-err = 12.5497 mm
+                          ridge_regression  (100 iters) MAE = 13.2259 mm   std =  9.5431 mm    33.40%
+                          ElasticNet                    MAE = 14.3192 mm   std = 10.1816 mm    33.20%
+                          Linear SVR                    MAE = 20.3067 mm   std = 14.0814 mm    19.84%
+                          stepwiselm                    MAE = 13.5980 mm   std =  9.9475 mm    32.93%
+                          Gaussian Process Regression   MAE = 13.9942 mm   std = 10.0360 mm    32.85%
+                          Ensemble Learners             MAE = 18.0884 mm   std = 13.5541 mm    27.52%
+                        Binary Regression Decision Tree MAE = 18.3677 mm   std = 13.4204 mm    25.73%
+
+  Thigh_Circ:             Mdl = fitrsvm(X, y)           MAE =  8.1332 mm   std =  6.5974 mm (10.4215)   46.73%   mid-err = -0.25871 mm abs-mid-err = 6.3245 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  8.1026 mm   std =  6.5378 mm (10.3649)   44.98%   mid-err = -0.59458 mm abs-min-err = 6.7315 mm
+                          ridge_regression  (100 iters) MAE =  8.1282 mm   std =  6.5902 mm    45.98%
+                          ElasticNet                    MAE =  8.5815 mm   std =  6.9762 mm    45.70%
+                          Linear SVR                    MAE = 40.1545 mm   std = 29.1578 mm    10.27%
+                          stepwiselm                    MAE =  8.2455 mm   std =  6.5852 mm    46.11%
+                          Gaussian Process Regression   MAE =  8.3581 mm   std =  6.4774 mm    48.15%
+                          Ensemble Learners             MAE = 12.9920 mm   std =  9.8947 mm    28.70%
+                        Binary Regression Decision Tree MAE = 11.9607 mm   std =  9.4808 mm    34.26%
+
+  TrouserWAIST_Circ:      Mdl = fitrsvm(X, y)           MAE = 16.1928 mm   std = 15.0801 mm (21.0519)          mid-err = 0.26995 mm abs-mid-err = 11.7539 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 16.6370 mm   std = 14.1485 mm (21.3423)          mid-err = -3.1087 mm abs-min-err = 13.2247 mm
+                          ridge_regression  (100 iters) MAE = 16.7074 mm   std = 14.1495 mm
+                          ElasticNet                    MAE = 17.9880 mm   std = 14.8537 mm   
+                          Linear SVR                    MAE = 54.5085 mm   std = 41.4121 mm   
+                          stepwiselm                    MAE = 16.6538 mm   std = 13.9337 mm   
+                          Gaussian Process Regression   MAE = 16.9827 mm   std = 14.0637 mm   
+                          Ensemble Learners             MAE = 21.8923 mm   std = 18.6527 mm    
+                        Binary Regression Decision Tree MAE = 20.9425 mm   std = 18.8453 mm    
+
+  Underbust_Circ:         Mdl = fitrsvm(X, y)           MAE = 14.1484 mm   std = 13.9980 mm (19.3559)   70.43%  mid-err = 0.091154 mm abs-mid-err = 10.7569 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE = 14.3163 mm   std = 13.7579 mm (19.4287)   67.64%  mid-err = 1.5298 mm   abs-min-err = 10.2286 mm
+                          ridge_regression  (100 iters) MAE = 14.2985 mm   std = 13.7150 mm    68.59%
+                          ElasticNet                    MAE = 16.0265 mm   std = 14.8090 mm    62.14%
+                          Linear SVR                    MAE = 43.7024 mm   std = 33.0442 mm    26.81%
+                          stepwiselm                    MAE = 14.3498 mm   std = 13.7046 mm    67.35%
+                          Gaussian Process Regression   MAE = 14.4632 mm   std = 13.7951 mm    67.80%
+                          Ensemble Learners             MAE = 21.4286 mm   std = 18.5910 mm    47.64%
+                        Binary Regression Decision Tree MAE = 19.8163 mm   std = 19.2159 mm    55.05%
+
+  Wrist_Circ:             Mdl = fitrsvm(X, y)           MAE =  4.6925 mm   std =  4.4094 mm (6.3044)   65.01%   mid-err = -0.14819 mm abs-mid-err = 3.9157 mm
+                          Mdl = fitlm(X, y, 'linear')   MAE =  5.0021 mm   std =  4.5914 mm (6.5384)   59.74%   mid-err = -0.81408 mm abs-min-err = 3.9517 mm
+                          ridge_regression  (100 iters) MAE =  4.8839 mm   std =  4.4377 mm    60.00%
+                          ElasticNet                    MAE =  5.9657 mm   std =  5.1310 mm    51.07%
+                          Linear SVR                    MAE =  7.5041 mm   std =  5.8538 mm    39.88%
+                          stepwiselm                    MAE =  4.7928 mm   std =  4.6433 mm    63.42%
+                          Gaussian Process Regression   MAE =  4.4908 mm   std =  4.0573 mm    66.32%
+                          Ensemble Learners             MAE =  6.0386 mm   std =  4.7484 mm    50.38%
+                        Binary Regression Decision Tree MAE =  5.8754 mm   std =  4.6087 mm    51.91%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

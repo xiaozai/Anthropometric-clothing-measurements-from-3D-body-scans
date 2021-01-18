@@ -1,0 +1,178 @@
+male: 
+
+  => Ankle: 6 Circles
+        num_Circ = 2 :  MAE =  8.6016 mm   std = 8.5010  mm   32.4680%
+        num_Circ = 4 :  MAE =  8.2315 mm   std = 8.2577  mm   31.6950%
+        num_Circ = 6 :  MAE =  8.3042 mm   std = 8.3480  mm   29.4420%
+       
+
+
+female: 
+  
+
+  => Ankle: 6 Circles
+        num_Circ = 2 :  MAE =  14.1437 mm   std =  18.7394 mm    25.5370%
+        num_Circ = 4 :  MAE =  14.2200 mm   std =  18.6351 mm    22.8510%
+        num_Circ = 6 :  MAE =  13.7337 mm   std =  19.4206 mm    27.5660%
+
+----------------------------------------------------------------------
+male: 
+
+  => Neck: 4 Circles
+        num_Circ = 1 :  MAE = 6.4951 mm  std = 7.5504 mm  58.13%
+        num_Circ = 2 :  MAE = 3.2601 mm  std = 5.9031 mm  92.01%
+        num_Circ = 3 :  MAE = 3.2781 mm  std = 5.9005 mm  91.95%
+        num_Circ = 4 :  MAE = 3.2086 mm  std = 5.9369 mm  92.06%
+
+female: 
+
+  => Neck: 5 Circles
+        num_Circ = 1 :  MAE = 9.4327 mm  std = 11.2437 mm  49.25%
+        num_Circ = 2 :  MAE = 5.4950 mm  std =  8.1963 mm  78.34%
+        num_Circ = 3 :  MAE = 5.5078 mm  std =  8.2503 mm  78.77%
+        num_Circ = 4 :  MAE = 5.4137 mm  std =  8.3459 mm  80.26%
+        num_Circ = 5 :  MAE = 5.4379 mm  std =  8.4450 mm  79.70%
+
+--------------------------------------------------------------------
+
+male: 
+
+  => Bicep: 8 Circls
+        num_Circ = 2 :  MAE =  6.1661 mm   std =  4.7556 mm   58.50%
+        num_Circ = 4 :  MAE =  6.0822 mm   std =  4.7461 mm   57.26%
+        num_Circ = 6 :  MAE =  6.1075 mm   std =  4.7504 mm   57.51%
+        num_Circ = 8 :  MAE =  6.1372 mm   std =  4.7950 mm   57.09%
+
+
+female: 
+
+
+  => Bicep: 
+        num_Circ = 2 :  MAE =  7.9224 mm   std =  6.3755 mm   47.02%
+        num_Circ = 4 :  MAE =  6.2156 mm   std =  5.2169 mm   60.74%
+        num_Circ = 6 :  MAE =  5.5330 mm   std =  4.8517 mm   63.82%
+        num_Circ = 8 :  MAE =  4.7487 mm   std =  4.1134 mm   72.42%
+
+---------------------------------------------------------------------
+male: 
+
+  => Calf: 6 Circles
+        num_Circ = 2 :  MAE =  4.7386 mm   std =  3.3085 mm   58.52%
+        num_Circ = 4 :  MAE =  3.4932 mm   std =  2.7738 mm   75.24%
+        num_Circ = 6 :  MAE =  3.1550 mm   std =  2.7740 mm   79.29%
+       
+
+
+female: 
+
+
+  => Calf: 6 Circles
+        num_Circ = 2 :  MAE =  4.0399 mm   std =  6.5289 mm    79.31%
+        num_Circ = 4 :  MAE =  4.0739 mm   std =  6.5792 mm    79.34%
+        num_Circ = 6 :  MAE =  3.8637 mm   std =  6.4744 mm    79.08%
+        
+---------------------------------------------------------------------
+
+male: 
+
+  => Chest: 5 Circles
+        num_Circ = 1 :  MAE = 21.7350 mm   std = 20.9054 mm  48.44%
+        num_Circ = 2 :  MAE = 17.0132 mm   std = 18.5392 mm  57.43%
+        num_Circ = 3 :  MAE = 17.0649 mm   std = 18.4553 mm  57.06%
+        num_Circ = 4 :  MAE = 15.6203 mm   std = 17.4301 mm  63.94%
+        num_Circ = 5 :  MAE = 15.1152 mm   std = 16.1839 mm  63.28%
+       
+
+
+female: 
+
+
+  => BUST: 3 Circls
+        num_Circ = 1 :  MAE = 15.7175 mm   std = 12.6375 mm    59.53%
+        num_Circ = 2 :  MAE = 13.3291 mm   std = 11.5398 mm    64.42%
+        num_Circ = 3 :  MAE = 12.7024 mm   std = 10.6897 mm    69.20%
+        
+---------------------------------------------------------------------
+
+
+male: 
+
+  => Elbow: 9 Circles
+        num_Circ = 2 :  MAE =  5.7749 mm   std =  4.4589 mm   39.36%
+        num_Circ = 4 :  MAE =  5.1825 mm   std =  4.1366 mm   47.32%
+        num_Circ = 6 :  MAE =  3.9857 mm   std =  3.3039 mm   59.40%
+        num_Circ = 8 :  MAE =  2.9588 mm   std =  2.7310 mm   76.02%
+        num_Circ = 9 :  MAE =  2.8485 mm   std =  2.7446 mm   76.98%
+       
+
+
+female: 
+
+
+  => Elbow: 6 Circls
+        num_Circ = 2 :  MAE =  3.9776 mm   std =  3.7316 mm    60.57%
+        num_Circ = 4 :  MAE =  3.4104 mm   std =  3.2791 mm    68.43%
+        num_Circ = 6 :  MAE =  3.4282 mm   std =  3.2875 mm    68.32%
+        
+---------------------------------------------------------------------
+
+
+male: 
+
+  => Knee: 6 Circles
+        num_Circ = 2 :  MAE =  5.2579 mm   std =  4.5406 mm   45.49%
+        num_Circ = 4 :  MAE =  5.2901 mm   std =  4.5284 mm   45.10%
+        num_Circ = 6 :  MAE =  5.3506 mm   std =  4.5734 mm   44.35%
+
+
+female: 
+
+
+  => Knee: 6 Circls
+        num_Circ = 2 :  MAE =  6.2874 mm   std =  5.8305 mm    40.68%
+        num_Circ = 4 :  MAE =  6.3745 mm   std =  6.1469 mm    39.75%
+        num_Circ = 6 :  MAE =  6.4513 mm   std =  6.2628 mm    39.51%
+        
+---------------------------------------------------------------------
+
+
+male: 
+
+  => Thigh: 8 Circles
+        num_Circ = 2 :  MAE =  15.1282 mm   std = 10.5313 mm  22.17%
+        num_Circ = 4 :  MAE =   9.1013 mm   std =  7.6299 mm  39.75%
+        num_Circ = 6 :  MAE =   8.5785 mm   std =  7.1912 mm  43.44%
+        num_Circ = 8 :  MAE =   8.3136 mm   std =  6.9473 mm  44.18%
+
+
+female: 
+
+
+  => Thigh: 9 Circls
+        num_Circ = 2 :  MAE =  11.6673 mm   std = 8.8210  mm   32.17%
+        num_Circ = 4 :  MAE =  11.4017 mm   std = 8.6563  mm   32.84%
+        num_Circ = 6 :  MAE =   9.0021 mm   std =  7.1888 mm   42.60%
+        num_Circ = 8 :  MAE =   8.1083 mm   std =  6.5698 mm   46.82%
+        num_Circ = 9 :  MAE =   8.1332 mm   std =  6.5974 mm   46.73%
+        
+---------------------------------------------------------------------
+
+
+male: 
+
+  => Wrist: 6 Circles
+        num_Circ = 2 :  MAE =  4.9904 mm   std =  3.9722 mm   58.20%
+        num_Circ = 4 :  MAE =  4.6022 mm   std =  3.5987 mm   63.87%
+        num_Circ = 6 :  MAE =  4.6274 mm   std =  3.6259 mm   63.01%
+
+
+female: 
+
+
+  => Wrist: 8 Circls
+        num_Circ = 2 :  MAE =  4.8952 mm   std =  4.5804 mm   64.82%
+        num_Circ = 4 :  MAE =  4.7923 mm   std =  4.4599 mm   64.63%
+        num_Circ = 6 :  MAE =  4.6757 mm   std =  4.3728 mm   64.92%
+        num_Circ = 8 :  MAE =  4.6925 mm   std =  4.4094 mm   65.01%
+        
+---------------------------------------------------------------------

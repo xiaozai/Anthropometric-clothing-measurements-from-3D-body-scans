@@ -1,0 +1,128 @@
+Male Samples: 192
+Train: 144 (0.75)
+Test:   48 (0.25)
+
+repeat 50 times
+--------------------------------------------------------------------------------------------------------------
+TrouserWAIST_Circ: 4 circles
+ matlab function : Mdl = fitlm(X,y, 'poly1122')             y_hat = predict(Mdl, testX)       mae = 11.4365 mm  std = 6.8053 mm
+ matlab function : Mdl = stepwiselm(X, y, 'purequadratic')  y_hat = predict(Mdl, testX)       mae = 11.3155 mm  std = 5.9743 mm
+
+Neck_Circ: 4 circles
+ matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 2.9784 mm  std = 1.0617 mm
+
+HIP_Circ: 4 circles
+ matlab function : Mdl = stepwiselm(X, y, 'linear')         y_hat = predict(Mdl, testSample); mae = 8.9673 mm  std = 4.3675 mm
+ matlab function : Mdl = fitlm(X, y, 'interactions');       y_hat = predict(Mdl, testX);      mae = 8.9453 mm  std = 4.4676 mm
+
+Calf_Circ: 6 circles
+ matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 3.0812 mm  std = 1.7758 mm
+
+Bicep_Circ: 8 circles
+ matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 6.1038 mm  std = 3.5035 mm
+ matlab function : Mdl = stepwiselm(X, y, 'linear')         y_hat = predict(Mdl, testSample); mae = 6.0442 mm  std = 3.7863 mm
+ matlab function : Mdl = fitlm(X, y, 'purequadratic');      y_hat = predict(Mdl, testX);      mae = 6.0318 mm  std = 3.4897 mm
+
+Elbow_Circ: 9 circles
+ matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 2.7410 mm  std = 1.5438 mm
+ matlab function : Mdl = fitlm(X, y, 'linear');             y_hat = predict(Mdl, testX);      mae = 2.8950 mm  std = 1.7556 mm
+
+Knee_Circ: 6 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);     mae = 5.2566 mm  std = 2.9224 mm
+  matlab function : Mdl = fitlm(X, y, 'linear');             y_hat = predict(Mdl, testX);     mae = 5.2160 mm  std = 3.2259 mm
+
+Thigh_Circ: 8 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);     mae = 8.2348 mm  std = 4.0898 mm
+
+
+-------------------------------------------------------------------------------------------------------------
+CHEST_Circ: based on Horizontal Planar circles, 4 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 14.5098 mm  std = 7.7763 mm
+
+TrouserWAIST_Circ: based on Horizontal Planar circles, 10 circles
+ matlab function  : Mdl = fitlm(X, y, 'linear');             y_hat = predict(Mdl, testX);      mae = 14.789 mm   std = 8.6713 mm
+
+-------------------------------------------------------------------------------------------------------------
+
+
+Female Samples: 177
+
+Bicep_Circ: 8 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 4.7889 mm  std = 2.6574 mm
+  matlab function : Mdl = fitlm(X, y, 'purequadratic');      y_hat = predict(Mdl, testX);      mae = 4.9407 mm  std = 2.5902 mm
+
+BUST_Circ: 3 circles
+  matlab function : Mdl = fitlm(X, y, 'quadratic');          y_hat = predict(Mdl, testX);      mae = 12.3232 mm std = 7.1390 mm
+
+Calf_Circ: 6 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 3.7263 mm  std = 1.5681 mm
+
+Elbow_Circ: 6 circles
+  matlab function : Mdl = fitlm(X, y, 'linear');             y_hat = predict(Mdl, testX);      mae = 3.5011 mm  std = 2.3574 mm
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);      mae = 3.4212 mm  std = 2.1420 mm
+
+
+HIP_Circ: 4 circles
+ matlab function : Mdl = stepwiselm(X, y, 'purequadratic')   y_hat = predict(Mdl, testSample); mae = 8.9618 mm  std = 5.0306 mm
+ matlab function : Mdl = fitlm(X, y, 'interactions');        y_hat = predict(Mdl, testX);      mae = 9.0838 mm  std = 4.9926 mm
+
+Knee_Circ: 6 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);     mae = 6.3508 mm  std = 3.6844 mm
+  matlab function : Mdl = fitlm(X, y, 'linear');             y_hat = predict(Mdl, testX);     mae = 6.8791 mm  std = 3.8434 mm
+
+Neck_Circ: 4 circles
+ matlab function : Mdl = fitrsvm(X, y);                      y_hat = predict(Mdl, testX);      mae = 5.3927 mm  std = 3.3413 mm
+
+
+Thigh_Circ: 9 circles
+  matlab function : Mdl = fitrsvm(X, y);                     y_hat = predict(Mdl, testX);     mae = 7.9902 mm  std = 5.3163 mm
+
+
+TrouserWAIST_Circ: 4 circles
+ matlab function : Mdl = fitlm(X,y, 'linear')                y_hat = predict(Mdl, testX)       mae = 15.7917 mm  std = 8.9050 mm
+
+Underbust_Circ: 2 circles
+ matlab function : Mdl = fitlm(X,y, 'quadratic')             y_hat = predict(Mdl, testX)       mae = 13.8478 mm  std = 8.5027 mm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

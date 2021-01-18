@@ -1,0 +1,10 @@
+
+In command line: 
+
+  matlab -nojvm -nodisplay -nosplash -r "NOMO_Measurement 'test_scan.obj' 'male' '/home/yan/Data2/NOMO_Project_P1/' '/home/yan/Data2/NOMO_Project_P1/'"
+
+In Matlab GUI: 
+
+  measurement_result = NOMO_Measurement('test_scan.obj', 'male', '/home/yan/Data2/NOMO_Project_P1/', '/home/yan/Data2/NOMO_Project_P1/');
+
+
