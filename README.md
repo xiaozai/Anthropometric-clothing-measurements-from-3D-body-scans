@@ -10,7 +10,7 @@ Code and Datasets for Anthropometric clothing measurements from 3D body scans (M
  - Code and Dataset Release on Zenodo doi : https://zenodo.org/badge/latestdoi/227084776
 
 To access the dataset, please contact the authors:
- - [**Song Yan**](https://scholar.google.com/citations?user=nmLU3wwAAAAJ&hl=en), _song.yan at tuni.fi_
+ - [**Song Yan**](https://scholar.google.com/citations?user=nmLU3wwAAAAJ&hl=en), _song.yan at tuni.fi_  (**Primary**)
  - [**Joni-Kristian Kämäräinen**](http://vision.cs.tut.fi/personal/JoniKamarainen/), _joni.kamarainen at tuni.fi_
  - [**Johan Wirta**](https://nomo3d.com), _johan.wirta at nomo3d.com_
 
