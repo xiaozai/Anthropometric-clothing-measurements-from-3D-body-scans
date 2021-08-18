@@ -1,7 +1,8 @@
 # Anthropometric-clothing-measurements-from-3D-body-scans
 Code and Datasets for Anthropometric clothing measurements from 3D body scans (MVA paper)
 
-The scans are collected by NOMO Technologies ( https://nomo3d.com/ ) Ltd.
+The scans are collected by NOMO Technologies ( https://nomo3d.com/ ) Ltd, Finland.
+To access the orignal scans, please contact NOMO.
 
  - Code
 
